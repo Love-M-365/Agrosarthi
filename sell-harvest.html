@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Sidebar</title>
+    <link rel="stylesheet" href="sell-harvest.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+</head>
+
+<body>
+    <div class="sidebar">
+        <h2>Dashboard</h2>
+        <div class="profile">
+            <img class="logo" src="logo.png" alt="logo">
+        
+        </div>
+        <div class="nav-item active" data-content="dashboard"><i class="fas fa-tachometer-alt"></i>Dashboard</div>
+        <div class="nav-item" data-content="profile"><i class="fas fa-user"></i>Profile</div>
+        <div class="nav-item" data-content="Make my Field"><i  class="fas fa-tractor farm-icon" ></i><a href="makemyfield.html" class="mmf">Make my field</a></div>
+        <div class="nav-item" data-content="store my harvest"><i class="fas fa-warehouse harvest-icon2"></i>Store My Harvest</div>
+        <div class="nav-item" data-content="logout"><i class="fas fa-seedling harvest-icon"></i>Sell My Harvest</div>
+      
+      <div class="nav-item" data-content="logout"><i class="fas fa-piggy-bank finance-icon"></i>
+      </i>Finance and Insurance</div>
+      <div class="nav-item" data-content="logout"><i class="fas fa-piggy-bank finance-icon"></i>
+      </i>Resources</div>
+      <div class="nav-item" data-content="logout"><i class="fas fa-cogs"></i>
+      </i>Equipment Guide</div>
+      <div class="nav-item" data-content="logout"><i class="fas fa-users community-icon"></i>
+      </i>Community</div>
+      </div>
+    </div>
+
+    <div class="sell-market">
+        <div class="sell-inst">
+    
+                <div class="container">
+                    <!-- Sell My Harvest Section -->
+                    <div class="sell-market">
+                        <div class="market-info-container">
+                            <h1 class="title">🌾 Sell My Harvest</h1>
+                            <p class="intro-text">Choose the best option below to sell your harvest. Let us guide you!</p>
+                            <form action="" method="POST" class="market-selection-form">
+                                <div class="form-group">
+                                    <label for="state">Select State:</label>
+                                    <select id="state" name="state" required>
+                                        <option value="">Select State</option>
+                                        <option value="Maharashtra">Maharashtra</option>
+                                        <option value="Punjab">Punjab</option>
+                                        <option value="Haryana">Haryana</option>
+                                        <option value="Delhi">Delhi</option>
+                                        <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="city">Select City:</label>
+                                    <select id="city" name="city" required>
+                                        <option value="">Select City</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="market-type">Choose Market Type:</label>
+                                    <select id="market-type" name="market-type" required>
+                                        <option value="">Select Market</option>
+                                        <option value="eNAM">eNAM (National Agriculture Market)</option>
+                                        <option value="Private eMandi">Private E-mandi</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="submit-btn">Explore Markets</button>
+                            </form>
+                        </div>
+                        
+                        <!-- Real-Time Market Prices Section -->
+                        <div class="real-time-container">
+                            <h2 class="subtitle">📈 Real-Time Market Prices</h2>
+                            <p class="date">13 November, 2024</p>
+                            <label for="cropSelect">Select Crop/Fruit:</label>
+                            <select id="cropSelect" onchange="updatePrices()">
+                                <option value="">--Choose an option--</option>
+                                <option value="wheat">Wheat</option>
+                                <option value="rice">Rice</option>
+                                <option value="corn">Corn</option>
+                                <option value="barley">Barley</option>
+                                <option value="soybean">Soybean</option>
+                                <option value="sugarcane">Sugarcane</option>
+                                <option value="cotton">Cotton</option>
+                                <option value="potato">Potato</option>
+                                <option value="apple">Apple</option>
+                                <option value="banana">Banana</option>
+                                <option value="orange">Orange</option>
+                                <option value="grapes">Grapes</option>
+                                <option value="mango">Mango</option>
+                            </select>
+                            
+                            <div class="price-container">
+                                <div class="price-box" id="priceToday">
+                                    <h3>Azadpur Mandi</h3>
+                                    <p id="todayPrice">-</p>
+                                </div>
+                                <div class="price-box" id="priceYesterday">
+                                    <h3>Ghazipur Mandi</h3>
+                                    <p id="yesterdayPrice">-</p>
+                                </div>
+                                <div class="price-box" id="priceLastWeek">
+                                    <h3>Okhla Mandi</h3>
+                                    <p id="lastWeekPrice">-</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Instructions Section -->
+            <div class="instructions-container">
+                <h1 class="instructions-title">📝 Instructions</h1>
+                <p>Learn how to sell your harvest efficiently and make the most of your produce.</p>
+                <h2 class="instructions-subtitle">Selling Options</h2>
+                <h3>1. eNAM (National Agriculture Market)</h3>
+                <p>eNAM connects farmers with buyers nationwide. It's a great way to reach more people.</p>
+                <ul>
+                    <li><strong>How It Works</strong>: List your harvest on eNAM and let traders bid on it.</li>
+                    <li><strong>Required Docs</strong>: ID proof (Aadhaar), bank details, produce certificates.</li>
+                    <li><strong>Benefits</strong>: National market access, better prices, and secure payments.</li>
+                </ul>
+                <h3>2. Private Mandis</h3>
+                <p>Private mandis are local or regional markets where you can sell your harvest more quickly.</p>
+                <ul>
+                    <li><strong>How It Works</strong>: Direct transactions with buyers or traders.</li>
+                    <li><strong>Required Docs</strong>: Basic ID and produce certificates.</li>
+                    <li><strong>Benefits</strong>: Faster transactions and personalized deals.</li>
+                </ul>
+                <h3>3. Local Mandis</h3>
+                <p>Sell your produce at the nearest mandi based on its schedule.</p>
+                <ul>
+                    <li><strong>How It Works</strong>: Visit the mandi on the scheduled date and sell directly.</li>
+                    <li><strong>Required Docs</strong>: Minimal (usually just farmer ID).</li>
+            </ul>
+            <h2>Important Notes</h2>
+            <ul>
+                <li><strong>Verify Documents</strong>: Make sure your ID and any required certificates are ready.</li>
+                <li><strong>Prepare Your Harvest</strong>: Organize your produce for easier sale.</li>
+                <li><strong>Maintain Records</strong>: Keep communication records for digital sales.</li>
+            </ul>
+            <h2>⚠️ Disclaimer</h2>
+            <p>Agrosarthi connects farmers to markets, but we are not responsible for any disputes or issues that arise during the sale.</p>
+        </div>
+    </div>
+        
+        <script src="sell.js"></script>
+        <script src="market.js"></script>
+    
+  
+    <script  src="sidebar.js"></script>
+</body>
+
+</html>

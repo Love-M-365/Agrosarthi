@@ -1,0 +1,110 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: bisque;
+}
+
+h1 {
+  margin-bottom: 12px;
+  font-size: 36px;
+  margin-left: 200px;
+}
+
+p {
+  margin-left: 200px;
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.table-container {
+  width: 75%;
+  margin-left: 200px;
+  overflow-x: auto;
+  border-radius: 20px;
+  transition: 0.3s;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Added box shadow */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slightly lighter shadow for table */
+  background-color: #ffffff;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #af4cad;
+  color: white;
+  text-transform: uppercase;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+.driver-photo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.rating-bar {
+  display: inline-block;
+  width: 100px;
+  height: 20px;
+  background-color: #ddd;
+  position: relative;
+  cursor: pointer;
+}
+
+.rating-bar .fill {
+  height: 100%;
+  background-color: #c7353f;
+  text-align: center;
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #423e80;
+  transition: all;
+}
+
+/* Star Rating CSS */
+.star-rating {
+  display: inline-block;
+}
+
+.star {
+  font-size: 20px;
+  color: #ddd;
+  cursor: pointer;
+}
+
+.star.checked {
+  color: #FFD700;
+}

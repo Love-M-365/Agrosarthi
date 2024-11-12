@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fertilizer Calculator for Multiple Crops</title>
+    <link rel="stylesheet" href="tools.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Fertilizer Calculator for Multiple Crops</h1>
+        
+        <form id="fertilizerForm">
+            <!-- Crop and Soil Type Selection -->
+            <label for="crop">Select Crop</label>
+            <select id="crop" required>
+                <option value="rice">Rice</option>
+                <option value="wheat">Wheat</option>
+                <option value="corn">Corn</option>
+                <option value="soybean">Soybean</option>
+            </select>
+
+            <label for="soil">Select Soil Type</label>
+            <select id="soil" required>
+                <option value="clay">Clay</option>
+                <option value="loamy">Loamy</option>
+                <option value="sandy">Sandy</option>
+            </select>
+
+            <!-- Additional Soil Details -->
+            <h3>Soil Details</h3>
+            <div class="input-container">
+                <div>
+                    <label for="ph">Soil pH</label>
+                    <input type="number" id="ph" min="3" max="10" step="0.1" placeholder="e.g., 6.5" required>
+                </div>
+                <div>
+                    <label for="nitrogen">Soil Nitrogen (ppm)</label>
+                    <input type="number" id="nitrogen" placeholder="e.g., 20" required>
+                </div>
+                <div>
+                    <label for="phosphorus">Soil Phosphorus (ppm)</label>
+                    <input type="number" id="phosphorus" placeholder="e.g., 15" required>
+                </div>
+                <div>
+                    <label for="potassium">Soil Potassium (ppm)</label>
+                    <input type="number" id="potassium" placeholder="e.g., 100" required>
+                </div>
+            </div>
+
+            <!-- Weather Conditions -->
+            <h3>Weather Conditions</h3>
+            <div class="input-container">
+                <div>
+                    <label for="temperature">Average Temperature (°C)</label>
+                    <input type="number" id="temperature" min="-10" max="50" step="0.1" placeholder="e.g., 25" required>
+                </div>
+                <div>
+                    <label for="rainfall">Average Rainfall (mm/month)</label>
+                    <input type="number" id="rainfall" placeholder="e.g., 150" required>
+                </div>
+                <div>
+                    <label for="humidity">Average Humidity (%)</label>
+                    <input type="number" id="humidity" min="0" max="100" placeholder="e.g., 70" required>
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="button" onclick="calculateFertilizer()">Get Fertilizer Recommendations</button>
+        </form>
+
+        <!-- Results Section -->
+        <div class="result" id="result" style="display: none;">
+            <h3>Fertilizer Recommendations:</h3>
+            <p id="fertilizerDetails"></p>
+            <p id="quantityDetails"></p>
+        </div>
+    </div>
+
+    <script>
+        // Function to calculate fertilizer recommendations
+        function calculateFertilizer() {
+            const crop = document.getElementById('crop').value;
+            const soil = document.getElementById('soil').value;
+            const ph = parseFloat(document.getElementById('ph').value);
+            const nitrogen = parseFloat(document.getElementById('nitrogen').value);
+            const phosphorus = parseFloat(document.getElementById('phosphorus').value);
+            const potassium = parseFloat(document.getElementById('potassium').value);
+            const temperature = parseFloat(document.getElementById('temperature').value);
+            const rainfall = parseFloat(document.getElementById('rainfall').value);
+            const humidity = parseFloat(document.getElementById('humidity').value);
+
+            let fertilizerDetails = "";
+            let quantityDetails = "";
+
+            // Weather Adjustments: Modify fertilizer recommendations based on temperature, rainfall, and humidity
+            let weatherAdjustment = "";
+            if (temperature > 30) {
+                weatherAdjustment = "Due to high temperatures, consider increasing irrigation and reducing fertilizer doses to prevent nutrient loss due to evaporation.";
+            } else if (rainfall < 100) {
+                weatherAdjustment = "Due to low rainfall, increase the nitrogen application to ensure adequate growth during dry conditions.";
+            } else if (humidity < 50) {
+                weatherAdjustment = "Low humidity may reduce the effectiveness of fertilizers, so ensure proper irrigation.";
+            }
+
+            // Crop-Specific Fertilizer Recommendations based on Soil Type
+            if (crop === "rice") {
+                if (soil === "clay") {
+                    fertilizerDetails = "For Rice on Clay Soil: Apply nitrogen in split doses (50% at planting, 50% at tillering) using Urea or Ammonium Sulfate. Apply Phosphorus (SSP or DAP) at planting and Potassium (MOP or Potassium Sulfate) at tillering.";
+                    quantityDetails = `For Rice on Clay Soil: 
+                    - Nitrogen: 100-150 kg/ha (50% at planting, 50% at tillering)
+                    - Phosphorus: 50-80 kg/ha (at planting)
+                    - Potassium: 40-60 kg/ha (at tillering)`;
+                }
+                // Similar cases for other soil types (loamy, sandy)
+            }
+
+            // Display the fertilizer details and weather adjustment message
+            document.getElementById('fertilizerDetails').innerText = fertilizerDetails + "\n" + weatherAdjustment;
+            document.getElementById('quantityDetails').innerText = quantityDetails;
+            document.getElementById('result').style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>

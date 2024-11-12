@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trucks and Tempos in New Delhi</title>
+  <link rel="stylesheet" href="transportpage.css">
+  <style>
+   
+  </style>
+</head>
+<body>
+<h1>Transport Services</h1>
+<p>Here are the contact numbers of transport drivers.</p>
+
+<div class="table-container">
+  <table>
+    <thead>
+      <tr>
+        <th>S.No</th>
+        <th>Photo</th>
+        <th>Name of Driver</th>
+        <th>Size of the Truck</th>
+        <th>Cost per Km</th>
+        <th>Contact No.</th>
+        
+        <th>Rating</th>
+        <th>Book Now</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td><img src="profile.png" alt="Driver Photo" class="driver-photo"></td>
+        <td>Rajesh Kumar</td>
+        <td>15 ft</td>
+        <td>₹25/km</td>
+        <td>+91 9876543210</td>
+        
+        <td>
+          <div class="star-rating">
+            <span class="star checked">&#9733;</span>
+            <span class="star checked">&#9733;</span>
+            <span class="star checked">&#9733;</span>
+            <span class="star checked">&#9733;</span>
+            <span class="star checked">&#9733;</span>
+          </div>
+        </td>
+        <td><button onclick="bookNow(this)">Book Now</button></td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td><img src="profile.png" alt="Driver Photo" class="driver-photo"></td>
+        <td>Amit Singh</td>
+        <td>20 ft</td>
+        <td>₹30/km</td>
+        <td>+91 9876501234</td>
+        
+        
+        <td>
+          <div class="star-rating">
+            <span class="star checked">&#9733;</span>
+            <span class="star checked">&#9733;</span>
+            <span class="star checked">&#9733;</span>
+            <span class="star checked">&#9733;</span>
+            <span class="star">&#9733;</span>
+          </div>
+        </td>
+        <td><button onclick="bookNow(this)">Book Now</button></td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td><img src="profile.png" alt="Driver Photo" class="driver-photo"></td>
+        <td>Sudhir Kumar</td>
+        <td>20 ft</td>
+        <td>₹27/km</td>
+        <td>+91 8702938330</td>
+        
+        <td>
+          <div class="star-rating">
+            <span class="star checked">&#9733;</span>
+            <span class="star checked">&#9733;</span>
+            <span class="star checked">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+          </div>
+        </td>
+        <td><button onclick="bookNow(this)">Book Now</button></td>
+      </tr>
+      <!-- Additional rows with other ratings as needed -->
+    </tbody>
+  </table>
+</div>
+
+<script> src="transportpage.js"</script>
+</body>
+</html>

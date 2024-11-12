@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="registration page.css">
+</head>
+<body>
+    
+        <div class="form-container">
+            <!-- Logo on the top left corner in a circular frame -->
+            
+                <img src="logo.png" alt="Logo" class="logo">
+            
+
+            <h1>Registration</h1>
+            <form action="#" method="post" enctype="multipart/form-data">
+                
+                <!-- Farmer's Name -->
+                <div class="form-group">
+                    <label for="name">Farmer's Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <!-- Phone Number -->
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <!-- Gender -->
+                <div class="form-group">
+                    <label for="gender">Gender:</label>
+                    <select id="gender" name="gender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <!-- States of India -->
+                <div class="form-group">
+                    <label for="state">State:</label>
+                    <select id="state" name="state">
+                        <option value="andhra_pradesh">Andhra Pradesh</option>
+                    <option value="arunachal_pradesh">Arunachal Pradesh</option>
+                    <option value="assam">Assam</option>
+                    <option value="bihar">Bihar</option>
+                    <option value="chhattisgarh">Chhattisgarh</option>
+                    <option value="goa">Goa</option>
+                    <option value="gujarat">Gujarat</option>
+                    <option value="haryana">Haryana</option>
+                    <option value="himachal_pradesh">Himachal Pradesh</option>
+                    <option value="jharkhand">Jharkhand</option>
+                    <option value="karnataka">Karnataka</option>
+                    <option value="kerala">Kerala</option>
+                    <option value="madhya_pradesh">Madhya Pradesh</option>
+                    <option value="maharashtra">Maharashtra</option>
+                    <option value="manipur">Manipur</option>
+                    <option value="meghalaya">Meghalaya</option>
+                    <option value="mizoram">Mizoram</option>
+                    <option value="nagaland">Nagaland</option>
+                    <option value="odisha">Odisha</option>
+                    <option value="punjab">Punjab</option>
+                    <option value="rajasthan">Rajasthan</option>
+                    <option value="sikkim">Sikkim</option>
+                    <option value="tamil_nadu">Tamil Nadu</option>
+                    <option value="telangana">Telangana</option>
+                    <option value="tripura">Tripura</option>
+                    <option value="uttar_pradesh">Uttar Pradesh</option>
+                    <option value="uttarakhand">Uttarakhand</option>
+                    <option value="west_bengal">West Bengal</option>
+                    <option value="andaman_nicobar">Andaman and Nicobar Islands</option>
+                    <option value="lakshadweep">Lakshadweep</option>
+                    <option value="andaman_nicobar">Andaman and Nicobar Islands</option>
+        <option value="chandigarh">Chandigarh</option>
+        <option value="dadra_nagar_haveli_daman_diu">Dadra and Nagar Haveli and Daman and Diu</option>
+        <option value="delhi">Delhi</option>
+        <option value="lakshadweep">Lakshadweep</option>
+        <option value="puducherry">Puducherry</option>
+        <option value="ladakh">Ladakh</option>
+        <option value="jammu_kashmir">Jammu and Kashmir</option>
+                    </select>
+                </div>
+
+                <!-- City -->
+                <div class="form-group">
+                    <label for="city">City:</label>
+                    <input type="text" id="city" name="city" required>
+                </div>
+
+                <!-- Education Level -->
+                <div class="form-group">
+                    <label for="education">Education Level:</label>
+                    <select id="education" name="education">
+                        <option value="not_completed_school">Not Completed School</option>
+                        <option value="till_12th">Till 12th</option>
+                        <option value="undergraduate">Undergraduate</option>
+                        <option value="postgraduate">Postgraduate</option>
+                    </select>
+                </div>
+
+                <!-- Area of Field in Acres -->
+                <div class="form-group">
+                    <label for="area">Total area of Field (in Acres):</label>
+                    <input type="number" id="area" name="area" step="0.01" required>
+                </div>
+
+                <!-- Profile Photo -->
+                <div class="form-group">
+                    <label for="profile">Profile Photo:</label>
+                    <input type="file" id="profile" name="profile" accept="image/*">
+                </div>
+
+                <!-- Submit Button -->
+                <div class="form-group">
+                    <input type="submit" value="Submit">
+                </div>
+
+            </form>
+        
+    </div>
+
+</body>
+</html>
+
+

@@ -1,0 +1,126 @@
+/* General body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f8f8f8;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    text-align: center;
+}
+
+/* Header Styling */
+header {
+    background: linear-gradient(45deg, #4CAF50, #3e8e41);
+    color: white;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; /* Curved border for header */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover */
+}
+
+header:hover {
+    transform: translateY(-5px); /* Move header up slightly on hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    font-weight: 300;
+}
+
+/* Webinar Container Styling */
+.webinar-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 15px; /* Curved border for the webinar container */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover */
+}
+
+.webinar-container:hover {
+    transform: translateY(-5px); /* Move container up slightly on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 1rem;
+    border-radius: 10px; /* Curved border for table */
+    overflow: hidden; /* Ensures rounded corners are visible */
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+/* Header Row Styling */
+th {
+    background-color: #4CAF50;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Table Row Styling */
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+    transform: scale(1.02); /* Slightly increase the size of the row */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add shadow to make it pop */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+/* Date Badge Styling */
+.date-badge {
+    color: #333;
+    padding: 8px 15px;
+    border-radius: 10px; /* Curved border for date badge */
+    font-weight: bold;
+    font-size: 1.1rem;
+    display: inline-block;
+    white-space: nowrap;
+    text-align: center;
+    margin: 0;
+}
+
+/* Link Button Styling */
+.register-btn {
+    display: inline-block;
+    background-color: #28a745;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 10px; /* Curved border for register button */
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover Effects for Buttons */
+.register-btn:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+.register-btn:active {
+    background-color: #1e7e34;
+    transform: translateY(2px);
+}
