@@ -1,0 +1,432 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    
+}
+
+body{
+    display: flex;
+    min-height: 100vh;
+    background-color: #f4f6f9;
+    
+}
+
+
+.sidebar {
+    background: linear-gradient(145deg, #e3e6eb, #ffffff);
+    border-radius: 12px;
+
+    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.2), -8px -8px 16px rgba(255, 255, 255, 0.7);
+    display: flex;
+    align-items: center;
+
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    
+    
+    top: 0;
+    z-index: 100;
+    width: 250px;
+    
+    color: black;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-image: url("navbarimg.jpg");
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position: bottom;
+    background-color: #fdc277;
+    text-align: center;
+
+  }
+
+  .sidebar h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  /* Navigation items */
+  .nav-item {
+    width: 110%;
+    padding: 15px;
+    color: #6c098a;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    transition: background 0.3s, transform 0.2s;
+    margin: 5px 0;
+    cursor: pointer;
+  }
+
+  .nav-item i {
+    margin-right: 15px;
+    font-size: 20px;
+  }
+
+  .nav-item:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+  }
+
+  .nav-item.active {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+  .farm-icon {
+    color:  #6c098a; /* Green color for farm theme */
+    font-size: 24px; /* Adjust size as needed */
+    
+
+}
+.harvest-icon2 {
+    color: #6c098a; /* Harvest/golden color */
+    font-size: 24px;
+    position: relative;
+    
+
+    
+}
+.harvest-icon {
+    color: #6c098a; /* Green for harvest */
+    font-size: 24px;
+    position: relative;
+
+
+}
+
+.sell-icon {
+    color: #FFC107; /* Gold for selling */
+    font-size: 24px;
+    
+    
+}
+.finance-icon {
+    color: #6c098a; /* Green for harvest */
+    font-size: 24px;
+    position: relative;
+    
+
+}
+.resources-icon {
+    color: #6c098a;
+    font-size: 24px;
+
+}
+
+.community-icon {
+    color: #6c098a;
+    font-size: 24px;
+    
+}
+/* Sidebar Styling */
+.sidebar {
+    width: 250px;
+    
+    color: black;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-image: url("navbarimg.jpg");
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position: bottom;
+    background-color: #fdc277;
+    text-align: center;
+}
+
+.sidebar-header {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.sidebar-header h2 {
+    font-size: 20px;
+    color: #181717;
+}
+
+.profile {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.profile h3 {
+    font-size: 18px;
+    color: #fff;
+}
+
+.profile p {
+    font-size: 14px;
+    color: #aaa;
+}
+
+nav ul {
+    list-style: none;
+    padding-top: 20px;
+    color: #181717;
+}
+
+nav ul li {
+    margin-bottom: 15px;
+    color: #181717;
+    align-items: center;
+    justify-content: center;
+}
+
+nav ul li a {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 15px;
+    display: block;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    color: #181717;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+}
+
+nav ul li a:hover {
+    background-color: #353945;
+    color: #fff;
+}
+
+nav ul li.active a {
+    background-color: #2d8cf0;
+    color: #fff;
+}
+header {
+    background-color: #0056b3;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+}
+
+/* Main content */
+main {
+  width: 90%;
+  max-width: 1200px;
+}
+
+
+
+
+/* Profile and right-side boxes */
+.content {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+/* Profile box */
+.profile-box {
+  background-color: rgba(255, 255, 255, 0.9);
+  width: 35rem;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin-top: 5rem;
+  margin-right: 3rem;
+  margin-bottom: 7rem;
+
+}
+
+.profile-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.profile-pic {
+  width: 200px;
+  height: 200px;
+  background-color: darkgray;
+  border-radius: 50%;
+  margin-bottom: 50px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.profile-details h3 {
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+/* Right side: accounts and bills */
+.right-boxes {
+  width: 30rem;
+  margin-top: 5rem;
+
+}
+
+/* Accounts box */
+.accounts-box, .bills-box {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.accounts-box:hover, .bills-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.accounts-box h3, .bills-box h3 {
+  margin-bottom: 15px;
+}
+
+
+
+/* Labour details form */
+form p {
+  margin-bottom: 10px;
+  
+}
+
+input {
+  padding: 8px;
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.add-labour-btn {
+  background-color: #f39c12;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100%;
+}
+.name {
+  font-size: 1.5rem;
+}
+.details{
+  font-family: "Swis721 Ex BT";
+  color: grey
+}
+
+#map {
+  width: 100%;
+  height: 500px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+/* Basic styling */
+
+.map-container {
+  margin-top: 4rem;
+  width: 80%;
+  max-width: 800px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-left: 9rem;
+  margin-top: 6rem;
+}
+.map-header {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #333;
+}
+.whole{
+  display: block;
+}
+.attendance-container {
+  display: flex;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+/* Styling for the checkboxes */
+input[type="checkbox"] {
+  width: 25px;
+  height: 25px;
+  appearance: none;
+  border: 2px solid #333;
+  border-radius: 4px;
+  position: relative;
+  margin-right: 20px;
+  cursor: pointer;
+  display: inline-block;
+  transition: all 0.2s ease;
+  margin-left: 1rem;
+}
+
+/* Adding text inside the checkbox */
+input[type="checkbox"]:checked::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  text-align: center;
+  line-height: 22px;
+  color: white;
+}
+
+/* Custom background colors for checked states */
+input[type="checkbox"]:checked {
+  background-color: #4CAF50;
+  border-color: #4CAF50;
+}
+input[type="checkbox"]:checked .red {
+  background-color: #97110c;
+  border-color:red;
+}
+
+input[type="checkbox"]:not(:checked) {
+  background-color: #f4f7fa;
+}
+.pa{
+  display: block;
+}
+.b{
+  display: block;
+}
+a{
+  text-decoration: none;
+  color: #6c098a;
+}
+a:hover{
+  color: purple;
+}

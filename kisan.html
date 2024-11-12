@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krishi Vigyan Kendra Locator</title>
+    <link rel="stylesheet" href="kisan.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Find Your Nearest Krishi Vigyan Kendra</h1>
+    <p>Choose your State and City to locate the nearest KVKs.</p>
+    
+    <!-- Dropdowns for State and City -->
+    <select id="state">
+        <option value="">Select State</option>
+        <option value="Delhi">Delhi</option>
+        <option value="Haryana">Haryana</option>
+        <option value="Maharashtra">Maharashtra</option>
+        <option value="Uttar Pradesh">Uttar Pradesh</option>
+        <option value="Tamil Nadu">Tamil Nadu</option>
+        <option value="Karnataka">Karnataka</option>
+        <option value="Bihar">Bihar</option>
+        <option value="Gujarat">Gujarat</option>
+        <option value="Rajasthan">Rajasthan</option>
+        <option value="West Bengal">West Bengal</option>
+        <option value="Punjab">Punjab</option>
+        <option value="Kerala">Kerala</option>
+    </select>
+
+    <select id="city">
+        <option value="">Select City</option>
+    </select>
+
+    <button onclick="findKVK()">Find KVKs</button>
+
+    <!-- Table for Displaying Results -->
+    <table id="kvkTable">
+        <thead>
+            <tr>
+                <th>S.No</th>
+                <th>Area</th>
+                <th>Address</th>
+                <th>Map Linkage</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+
+<script>
+    // Sample data for Krishi Vigyan Kendra centers
+    const kvkCenters = [
+        { state: "Delhi", city: "New Delhi", area: "Pusa", address: "IARI Campus, Pusa, New Delhi", mapLink: "https://goo.gl/maps/xyz1" },
+        { state: "Delhi", city: "New Delhi", area: "Kanjhawala", address: "Kanjhawala Road, Delhi", mapLink: "https://goo.gl/maps/xyz2" },
+        { state: "Haryana", city: "Gurgaon", area: "Gurgaon", address: "Sohna Road, Gurgaon", mapLink: "https://goo.gl/maps/xyz3" },
+        { state: "Maharashtra", city: "Mumbai", area: "Andheri", address: "Andheri West, Mumbai", mapLink: "https://goo.gl/maps/xyz4" },
+        { state: "Uttar Pradesh", city: "Lucknow", area: "Chinhat", address: "Chinhat, Lucknow", mapLink: "https://goo.gl/maps/xyz5" },
+        { state: "Tamil Nadu", city: "Chennai", area: "Egmore", address: "Egmore, Chennai", mapLink: "https://goo.gl/maps/xyz6" },
+        { state: "Karnataka", city: "Bangalore", area: "Koramangala", address: "Koramangala, Bangalore", mapLink: "https://goo.gl/maps/xyz7" },
+        { state: "Bihar", city: "Patna", area: "Bakhtiyarpur", address: "Bakhtiyarpur, Patna", mapLink: "https://goo.gl/maps/xyz8" },
+        { state: "Gujarat", city: "Ahmedabad", area: "Vastrapur", address: "Vastrapur, Ahmedabad", mapLink: "https://goo.gl/maps/xyz9" },
+        { state: "Rajasthan", city: "Jaipur", area: "Malviya Nagar", address: "Malviya Nagar, Jaipur", mapLink: "https://goo.gl/maps/xyz10" },
+        { state: "West Bengal", city: "Kolkata", area: "Salt Lake", address: "Salt Lake, Kolkata", mapLink: "https://goo.gl/maps/xyz11" },
+        { state: "Punjab", city: "Amritsar", area: "Attari", address: "Attari, Amritsar", mapLink: "https://goo.gl/maps/xyz12" },
+        { state: "Kerala", city: "Kochi", area: "Kaloor", address: "Kaloor, Kochi", mapLink: "https://goo.gl/maps/xyz13" }
+    ];
+
+    // Function to populate the City dropdown based on selected State
+    document.getElementById('state').addEventListener('change', function() {
+        const state = this.value;
+        const citySelect = document.getElementById('city');
+        citySelect.innerHTML = '<option value="">Select City</option>';
+
+        // Filter cities based on selected state
+        const cities = kvkCenters.filter(kvk => kvk.state === state).map(kvk => kvk.city);
+        const uniqueCities = [...new Set(cities)];
+
+        // Add cities to dropdown
+        uniqueCities.forEach(city => {
+            const option = document.createElement('option');
+            option.value = city;
+            option.textContent = city;
+            citySelect.appendChild(option);
+        });
+    });
+
+    // Function to find and display KVKs based on user input
+    function findKVK() {
+        const stateInput = document.getElementById("state").value;
+        const cityInput = document.getElementById("city").value;
+
+        // Filter KVK centers based on user input
+        const filteredKVKs = kvkCenters.filter(kvk =>
+            kvk.state === stateInput && kvk.city === cityInput
+        );
+
+        // Get table body element to display data
+        const tableBody = document.getElementById("kvkTable").getElementsByTagName("tbody")[0];
+        tableBody.innerHTML = "";  // Clear previous results
+
+        // Populate table with filtered data
+        filteredKVKs.forEach((kvk, index) => {
+            const row = tableBody.insertRow();
+
+            row.insertCell(0).textContent = index + 1;
+            row.insertCell(1).textContent = kvk.area;
+            row.insertCell(2).textContent = kvk.address;
+
+            // Create map link
+            const mapLinkCell = row.insertCell(3);
+            const mapLink = document.createElement("a");
+            mapLink.href = kvk.mapLink;
+            mapLink.textContent = "View Map";
+            mapLink.target = "_blank"; // Opens in a new tab
+            mapLinkCell.appendChild(mapLink);
+        });
+
+        // If no results found
+        if (filteredKVKs.length === 0) {
+            const row = tableBody.insertRow();
+            const cell = row.insertCell(0);
+            cell.colSpan = 4;
+            cell.textContent = "No Krishi Vigyan Kendra found for the specified location.";
+            cell.style.color = "red";
+        }
+    }
+</script>
+
+</body>
+</html>

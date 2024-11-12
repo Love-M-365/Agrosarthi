@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Sidebar</title>
+    <link rel="stylesheet" href="profilepage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+</head>
+
+
+    <div class="sidebar">
+        <h3>Profile</h3>
+        <div class="profile">
+            <img class="logo" src="logo.png" alt="logo">
+        
+        </div>
+        <div class="nav-item " data-content="dashboard"><i class="fas fa-tachometer-alt"></i>Dashboard</div>
+        <div class="nav-item active" data-content="profile"><i class="fas fa-user"></i>Profile</div>
+        <div class="nav-item " data-content="Make my Field"><i  class="fas fa-tractor farm-icon"  ></i><a href="makemyfield.html">Make my field</a></div>
+        <div class="nav-item" data-content="store my harvest"><i class="fas fa-warehouse harvest-icon2"></i>Store My Harvest</div>
+        <div class="nav-item" data-content="logout"><i class="fas fa-seedling harvest-icon"></i>Sell My Harvest</div>
+      
+      <div class="nav-item" data-content="logout"><i class="fas fa-piggy-bank finance-icon"></i>
+      </i>Finance and Insurance</div>
+      <div class="nav-item" data-content="logout"><i class="fas fa-piggy-bank finance-icon"></i>
+      </i>Resources</div>
+      <div class="nav-item" data-content="logout"><i class="fas fa-cogs"></i>
+      </i>Equipment Guide</div>
+      <div class="nav-item" data-content="logout"><i class="fas fa-users community-icon"></i>
+      </i>Community</div>
+      </div>
+
+    <body>
+      <div class="whole">
+      <div class="container">
+        <!-- Main content -->
+        <main>
+            
+            
+            <!-- Profile and other content -->
+            <div class="content">
+                <!-- Left box: Profile section -->
+                <div class="profile-box">
+                    <img class="profile-pic" src="profile picture.jpeg" alt="Profile Picture">
+                    <div class="profile-details">
+                        <h3>My Profile</h3>
+                        <div class="details">
+                        <p class="name"> <strong>Name:</strong> Rajesh Kumar</p>
+                        <p class="name"><strong>Age:</strong> 45</p>
+                        <p class="name"><strong>Gender:</strong> Male</p>
+                        <p class="name"><strong>Phone:</strong> 9876543210</p>
+                        <p class="name"><strong>Email:</strong> rajesh.kumar@example.com</p>
+                        <p class="name"><strong>State:</strong> New Delhi</p>
+                        <p class="name"><strong>City:</strong> Delhi</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right boxes: Account and Bills -->
+                <div class="right-boxes">
+                    <!-- Top-right box: Account details -->
+                    <div class="accounts-box">
+                      <div class="date" id="date">November 13, 2024</div>
+                        <h3>LABOUR INFO</h3>
+                        <form class="b">
+                          <div class="pa">1. Kamlesh<div class="attendance-container">
+                            <!-- Present Checkbox -->
+                            <input type="checkbox" id="present" data-text="P">
+                            <!-- Absent Checkbox -->
+                            <input type="checkbox" id="absent" class="red" data-text="A">
+                          </div>
+                          2. Raju<div class="attendance-container">
+                            <!-- Present Checkbox -->
+                            <input type="checkbox" id="present" data-text="P">
+                            <!-- Absent Checkbox -->
+                            <input type="checkbox" id="absent"  data-text="A">
+                          </div>
+                          <div class="pa">3. lalit<div class="attendance-container">
+                            <!-- Present Checkbox -->
+                            <input type="checkbox" id="present" data-text="P">
+                            <!-- Absent Checkbox -->
+                            <input type="checkbox" id="absent" class="red" data-text="A">
+                          </div>
+                                    
+                        </form>
+                        
+                        
+                    </div>
+
+                    <!-- Bottom-right box: Labour details -->
+                    <div class="bills-box">
+                        <h3>Labour Details</h3>
+                        <form>
+                            <p><label for="labour1-name">Labour  Name:</label>
+                            <input type="text" id="labour1-name" name="labour1-name"></p>
+
+                           
+                            <p><label for="labour1-salary">Amount of Salary Credited:</label>
+                            <input type="number" id="labour1-salary" name="labour1-salary"></p>
+
+                            
+
+                            <button type="button" class="add-labour-btn">Add more labour</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <div class="map-container">
+      <div class="map-header">Highlighted Farm Area - New Delhi, India</div>
+      <div id="map"></div>
+    </div>
+  </div>
+    </body>
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+<script>
+  // Initialize the map and set its view to the New Delhi area
+  var map = L.map('map').setView([28.6139, 77.2090], 14); // Centered on New Delhi
+
+  // Add OpenStreetMap tiles
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '© OpenStreetMap contributors'
+  }).addTo(map);
+
+  // Define coordinates for the polygon (replace with actual farm coordinates)
+  var farmCoordinates = [
+    [28.6145, 77.2050],
+    [28.6155, 77.2070],
+    [28.6135, 77.2095],
+    [28.6125, 77.2075]
+  ];
+
+  // Create a polygon to highlight the farm area
+  var farmArea = L.polygon(farmCoordinates, {
+    color: 'green',
+    fillColor: '#4CAF50',
+    fillOpacity: 0.5,
+    weight: 2
+  }).addTo(map);
+
+  // Add popup to the polygon
+  farmArea.bindPopup("<b>Farm Area</b><br>New Delhi, India");
+</script>
+ 
+</html>

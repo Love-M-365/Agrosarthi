@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Sidebar</title>
+    <link rel="stylesheet" href="makemyfield.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+</head>
+
+
+    <div class="sidebar">
+        <h3>Make My Field</h3>
+        <div class="profile">
+            <img class="logo" src="logo.png" alt="logo">
+        
+        </div>
+        <div class="nav-item " data-content="dashboard"><i class="fas fa-tachometer-alt"></i>Dashboard</div>
+        <div class="nav-item" data-content="profile"><i class="fas fa-user"></i>Profile</div>
+        <div class="nav-item active" data-content="Make my Field"><i  class="fas fa-tractor farm-icon"  ></i>Make my field</div>
+        <div class="nav-item" data-content="store my harvest"><i class="fas fa-warehouse harvest-icon2"></i><a href="storemyharvestpage.html">Store My Harvest</a></div>
+        <div class="nav-item" data-content="logout"><i class="fas fa-seedling harvest-icon"></i>Sell My Harvest</div>
+      
+      <div class="nav-item" data-content="logout"><i class="fas fa-piggy-bank finance-icon"></i>
+      </i>Finance and Insurance</div>
+      <div class="nav-item" data-content="logout"><i class="fas fa-piggy-bank finance-icon"></i>
+      </i>Resources</div>
+      <div class="nav-item" data-content="logout"><i class="fas fa-cogs"></i>
+      </i>Equipment Guide</div>
+      <div class="nav-item" data-content="logout"><i class="fas fa-users community-icon"></i>
+      </i>Community</div>
+      </div>
+
+    <body>
+    
+        <div class="container">
+            <div class="ved">
+                <div class="bl">
+            <section class="soil-health">
+                <h2>Soil Health</h2>
+                <div class="soil-health-card">
+                  <p><strong>pH Level:</strong> 6.5</p>
+                  <p><strong>Moisture:</strong> 30%</p>
+                  <p><strong>Nitrogen:</strong> 110 ppm</p>
+                  <p><strong>Phosphorus:</strong> 60 ppm</p>
+                  <p><strong>Potassium:</strong> 50 ppm</p>
+                </div>
+            </div>
+              </section>
+                
+            <!-- Main Content Header -->
+            <div class="video-container">
+                <video autoplay loop muted>
+                  <source src="makemyfield.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              </div>
+            
+              <button class="btn-3d"><a href="makemyfield2.html">+ Add New Field</a></button>
+              <div class="dn">
+              <section class="field-overview">
+                <div class="field-card">
+                  <h3>Field 1</h3>
+                  <p><strong>Area:</strong> 5 acres</p>
+                  <p><strong>Crops:</strong> Wheat, Corn</p>
+                  <p><strong>Status:</strong> Growing</p>
+                  <button class="view-details">View Details</button>
+                </div>
+                <div class="field-card">
+                  <h3>Field 2</h3>
+                  <p><strong>Area:</strong> 3 acres</p>
+                  <p><strong>Crops:</strong> Rice</p>
+                  <p><strong>Status:</strong> Harvested</p>
+                  <button class="view-details">View Details</button>
+                </div>
+              </section>
+              <div class="container2">
+                <div class="header">
+                  <h2>Lend Equipments</h2>
+                  <button class="add-field-button not2" onclick="addnot2()">🔔</button>
+                  <button class="add-field-button" onclick="addField()">+</button>
+                </div>
+            
+                <div id="field-container" class="field-input-container">
+                  <!-- Dynamic input fields will be added here -->
+                </div>
+              </div>
+              
+              <div class="container2">
+                <div class="header">
+                  <h2>Borrow Equipments</h2>
+                  <button class="add-field-button not" onclick="addnot()">🔔</button>
+                  <button class="add-field-button" onclick="addborrow()">+</button>
+                  
+                </div>
+            
+                <div id="field-container2" class="field-input-container">
+                  <!-- Dynamic input fields will be added here -->
+                </div>
+              </div>
+            </div>
+
+            <!-- Field Overview Section -->
+           
+        
+            <!-- Soil Health Section -->
+            
+          </div>
+       
+          <!-- Soil Health Section -->
+         
+         
+    </body>
+    <script src="makemyfield.js"></script>
+</html>
