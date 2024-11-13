@@ -1,0 +1,284 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+   
+    
+}
+
+body {
+
+    display: flex;
+    min-height: 100vh;
+    background-color: #f4f6f9;
+    
+    
+}
+
+/* Sidebar Styling */
+.sidebar {
+    background: linear-gradient(145deg, #e3e6eb, #ffffff);
+    border-radius: 12px;
+
+    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.2), -8px -8px 16px rgba(255, 255, 255, 0.7);
+    display: flex;
+    align-items: center;
+
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    width: 250px;
+    
+    color: black;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-image: url("navbarimg.jpg");
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position: bottom;
+    background-color: #fdc277;
+    text-align: center;
+}
+
+.sidebar-header {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.sidebar-header h2 {
+    font-size: 20px;
+    color: #181717;
+}
+
+.profile {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.profile h3 {
+    font-size: 18px;
+    color: #fff;
+}
+
+.profile p {
+    font-size: 14px;
+    color: #aaa;
+}
+
+nav ul {
+    list-style: none;
+    padding-top: 20px;
+    color: #181717;
+}
+
+nav ul li {
+    margin-bottom: 15px;
+    color: #181717;
+    align-items: center;
+    justify-content: center;
+}
+
+nav ul li a {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 15px;
+    display: block;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    color: #181717;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+}
+
+nav ul li a:hover {
+    background-color: #353945;
+    color: #fff;
+}
+
+nav ul li.active a {
+    background-color: #2d8cf0;
+    color: #fff;
+}
+
+
+  .sidebar {
+    width: 250px;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    position: relative;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15);
+    transition: width 0.3s;
+    background-image: url("navbarimg.jpg");
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position: bottom;
+    background-color: #fdc277;
+  }
+
+  .sidebar h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  /* Navigation items */
+  .nav-item {
+    width: 110%;
+    padding: 15px;
+    color: #6c098a;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    transition: background 0.3s, transform 0.2s;
+    margin: 5px 0;
+    cursor: pointer;
+  }
+
+  .nav-item i {
+    margin-right: 15px;
+    font-size: 20px;
+  }
+
+  .nav-item:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+  }
+
+  .nav-item.active {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+
+a{
+    text-decoration: none;
+    color: #6c098a;
+}
+a:hover{
+    color: purple;
+}
+.quote{
+    margin-top: 0;
+    font-weight: 400;
+    font-size: 3rem;
+    text-align: center;
+    position: relative;
+    bottom: 5rem;
+    font-family: arial;
+}
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin: 20px 0;
+  font-weight: bold;
+}
+
+.equipment-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-items: center;
+  margin: 20px;
+}
+
+.equipment-item {
+  width: 150px;
+  height: 150px;
+  background: #4caf50;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.equipment-item:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.hidden {
+  display: none;
+}
+
+#soil-sensors-page {
+  text-align: center;
+}
+
+.info-box {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 30px;
+  background: rgba(206, 220, 240, 0.9);
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.back-btn {
+  margin: 20px;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.back-btn:hover {
+  background-color: #45a049;
+}
+
+iframe {
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#landing-page{
+  margin-left: 10rem;
+}
+#soil-sensors-page{
+  margin-left: 10rem;
+  justify-content: left;
+}
+.info-box{
+  justify-content: left;
+  text-align: left;
+}
+a{
+  text-decoration: none;
+  color: #6c098a;
+}
+a:hover{
+  color: purple;
+}

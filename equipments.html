@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agriculture Equipment</title>
+    <link rel="stylesheet" href="equipments.css">
+</head>
+<body>
+    <!-- Landing Page -->
+    <div id="landing-page">
+        <h1>Which equipment do you want to know about?</h1>
+        <div class="equipment-grid">
+            <div class="equipment-item" onclick="showSoilSensors()">Soil Sensors</div>
+            <div class="equipment-item">Autonomous Tractors</div>
+            <div class="equipment-item">Agricultural Drones</div>
+            <div class="equipment-item">Robotic Harvesters</div>
+            <div class="equipment-item">IoT Sensors</div>
+            <div class="equipment-item">Irrigation Machinery</div>
+            <div class="equipment-item">Rotavator</div>
+            <div class="equipment-item">Vertical Farming Systems</div>
+            <div class="equipment-item">Roto Seed Drill</div>
+        </div>
+    </div>
+
+    <!-- Soil Sensors Page -->
+    <div id="soil-sensors-page" class="hidden">
+        
+        <div class="info-box">
+            <h2>Soil Sensors</h2>
+            <p><strong>Overview:</strong> Instruments used to measure soil moisture, pH, salinity, conductivity, and temperature to optimize agricultural cultivation.</p>
+            <p><strong>Types of Soil Sensors:</strong></p>
+            <ul>
+                <li>Soil Moisture Sensor</li>
+                <li>Soil Temperature Sensor</li>
+                <li>Soil Conductivity Sensor</li>
+                <li>Soil pH Sensor</li>
+                <li>Soil NPK Sensor (measures nitrogen, phosphorus, and potassium levels)</li>
+            </ul>
+            <p><strong>Working:</strong></p>
+            <ul>
+                <li><strong>Data Acquisition:</strong> Sensing element measures specific soil properties (moisture, pH, etc.).</li>
+                <li><strong>Signal Conversion:</strong> Data is converted into electrical signals.</li>
+                <li><strong>Signal Transmission:</strong> Signals are transmitted to a computer or controller (wired/wireless).</li>
+                <li><strong>Data Processing:</strong> Computer processes and analyzes the data to extract useful insights.</li>
+                <li><strong>Device Control:</strong> Based on the data, systems like irrigation can be automatically controlled.</li>
+            </ul>
+            <p><strong>Benefits:</strong></p>
+            <ul>
+                <li>Precise Irrigation Control: Helps optimize water usage.</li>
+                <li>Resource Conservation: Minimizes overuse of water and fertilizers.</li>
+                <li>Improved Crop Yields: Better soil monitoring leads to healthier crops.</li>
+                <li>Real-Time Data: Provides actionable insights for timely decisions.</li>
+            </ul>
+            <p><strong>Maintenance Tips:</strong></p>
+            <ul>
+                <li>Cleaning: Regularly clean sensors to prevent soil buildup and ensure accurate readings.</li>
+                <li>Calibration: Recalibrate periodically to maintain precision.</li>
+                <li>Battery Care: If battery-powered, check battery levels and replace them as needed.</li>
+                <li>Storage: Store sensors properly when not in use to avoid damage.</li>
+            </ul>
+            <p><strong>Precautions:</strong></p>
+            <ul>
+                <li>Proper Installation: Ensure sensors are installed correctly at the appropriate depth for accurate measurements.</li>
+                <li>Avoid Water Damage: Some sensors may not be fully waterproof; take care to protect them during heavy irrigation.</li>
+                <li>Data Accuracy: Double-check sensor readings periodically to ensure they reflect field conditions accurately.</li>
+            </ul>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/sQ8BJfV87l8?si=W5bhVndXhM6vmMSv" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <button class="back-btn" onclick="goBack()">Back</button>
+    </div>
+
+    <script src="equipments.js"></script>
+</body>
+</html>
+
